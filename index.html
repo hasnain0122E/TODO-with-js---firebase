@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP + Firebase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-img">
+        <img src="./assets/bg-desktop-dark.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+            <div class="theme">
+                <img src="./assets/icon-sun.svg" alt=""></img>
+            </div>
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark"></div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="additem(event)">
+                    <input id="todo-Input" type="text" placeholder="Add new TODO...">
+                </form>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        coding todo app js + firebase
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        coding todo app js + firebase
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        coding todo app js + firebase
+                    </div>
+                </div>
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    5 items left
+                </div>
+                <div class="items-statuses">
+                    <span class="active">All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+                <div class="items-clear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="app.js" type="module"></script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Signup.css">
+    <title>Signup TODO</title>
+</head>
+<body>
+     <div class="background-img">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='300' viewBox='0 0 1440 300'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23161722;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23191a2e;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1440' height='300' fill='url(%23bg)' /%3E%3C/svg%3E" alt="Background">
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="title">TODO</div>
+        </div>
+
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <div class="auth-tab active" onclick="switchTab('login')">Login</div>
+                <div class="auth-tab" onclick="switchTab('signup')">Sign Up</div>
+            </div>
+
+            <div class="auth-form" id="login-form">
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input type="email" id="login-email" placeholder=" " required>
+                            <label class="form-label" for="login-email">Email</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input type="password" id="login-password" placeholder=" " required>
+                            <label class="form-label" for="login-password">Password</label>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="login-error"></div>
+                    
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                
+                
+                <div class="auth-switch">
+                    Don't have an account? <span onclick="switchTab('signup')">Sign up</span>
+                </div>
+            </div>
+
+            <div class="auth-form" id="signup-form" style="display: none;">
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input type="text" id="signup-name" placeholder=" " required>
+                            <label class="form-label" for="signup-name">Full Name</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input type="email" id="signup-email" placeholder=" " required>
+                            <label class="form-label" for="signup-email">Email</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input type="password" id="signup-password" placeholder=" " required>
+                            <label class="form-label" for="signup-password">Password</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input type="password" id="signup-confirm-password" placeholder=" " required>
+                            <label class="form-label" for="signup-confirm-password">Confirm Password</label>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="signup-error"></div>
+                    
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </form>
+                
+                <div class="auth-switch">
+                    Already have an account? <span onclick="switchTab('login')">Login</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="signup.js" type="module"></script>
+</html>
